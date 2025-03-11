@@ -35,6 +35,21 @@ app.get("/", (req, res) => {
   });
 });
 
+// Update file name
+app.get("/edit/:filename", (req, res) => {
+  res.render("edit", { filename: req.params.filename });
+});
+
+app.post("/edit", (req, res) => {
+  fs.rename(
+    `./files/${req.body.previous}`,
+    `./files/${req.body.new}`,
+    (err) => {
+      res.redirect("/");
+    }
+  );
+});
+
 // Route to read a file
 app.get("/files/:filename", (req, res) => {
   const filePath = path.join(filesDir, req.params.filename);
