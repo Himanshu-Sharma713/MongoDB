@@ -20,7 +20,7 @@
           />
           <textarea
             class="block w-full rounded-md mt-2 px-5 py-2 bg-zinc-600 resize-none"
-            name="description"
+            name="details"
             placeholder="Write your task detail here..."
             required
           ></textarea>
@@ -36,7 +36,7 @@
         <% if (files.length > 0) { %> <% files.forEach((val) => { %>
         <div class="task w-72 px-3 py-4 rounded-md bg-zinc-800">
           <h1 class="text-white text-2xl tracking-tighter"><%= val %></h1>
-          <a class="text-blue-600 inline-block mt-3" href="/files/<%=val%>"
+          <a class="text-blue-600 inline-block mt-3" href="../files/<%= val %>"
             >Read more</a
           >
         </div>

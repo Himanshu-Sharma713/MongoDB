@@ -1,0 +1,1 @@
+MongoDB is a NoSQL database that stores data in a flexible, document-oriented format (BSON - Binary JSON) instead of traditional rows and columns. It is designed to handle large-scale data with high performance, scalability, and flexibility. 
